@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>نظام MIS الأكاديمي | عقل مؤسسي</title>
+    <!-- ربط ملف التنسيق الذي يدعم الهواتف -->
+    <link rel="stylesheet" href="style.css">
+    <!-- أيقونات لإضافة لمسة احترافية -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- شريط التنويع العلوي -->
+    <header class="main-header">
+        <div class="header-content">
+            <div class="logo">
+                <i class="fas fa-network-wired"></i>
+                <span>نظام MIS الذكي</span>
+            </div>
+            <nav class="status-bar">
+                <span class="badge it-bg">تقني</span>
+                <span class="badge core-bg">تخصص</span>
+                <span class="badge mgmt-bg">إداري</span>
+            </nav>
+        </div>
+        <div class="hero-section">
+            <h1>مخطط المسار الأكاديمي التفاعلي</h1>
+            <p>جامعة آل البيت - كلية تكنولوجيا المعلومات</p>
+        </div>
+    </header>
+
+    <!-- منطقة عرض الخطة الدراسية -->
+    <main class="container">
+        <section class="controls">
+            <input type="text" id="searchCourse" placeholder="ابحث عن مادة (مثلاً: قواعد بيانات)...">
+        </section>
+
+        <!-- هنا سيتم حقن جميع المواد من ملف data.js -->
+        <div id="course-grid" class="grid-container">
+            <!-- Loader بسيط يظهر حتى تحميل البيانات -->
+            <div class="loader">جاري تحميل الخطة الدراسية...</div>
+        </div>
+    </main>
+
+    <!-- نافذة تفاصيل المادة (Popup) - مصممة للهواتف والحاسوب -->
+    <div id="info-card" class="modal hidden">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <div class="modal-header">
+                <i class="fas fa-book-open"></i>
+                <h2 id="card-title">اسم المادة</h2>
+            </div>
+            <div class="modal-body">
+                <div class="info-row">
+                    <span><i class="fas fa-clock"></i> عدد الساعات:</span>
+                    <strong id="card-hours">3</strong>
+                </div>
+                <div class="info-row">
+                    <span><i class="fas fa-project-diagram"></i> المتطلب السابق:</span>
+                    <strong id="card-pre">لا يوجد</strong>
+                </div>
+                <hr>
+                <p id="card-desc" class="description-text">
+                    وصف المادة يظهر هنا بشكل مفصل ليساعد الطالب على فهم المحتوى الأكاديمي.
+                </p>
+            </div>
+            <div class="modal-footer">
+                <button class="btn-primary">إضافة للخطة الدراسية</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- تذييل الصفحة -->
+    <footer class="main-footer">
+        <p>تم التطوير بواسطة عبد الرحمن غالي ا</p>
+    </footer>
+
+    <!-- ربط الملفات البرمجية بالترتيب الصحيح -->
+    <script src="data.js"></script>
+    <script src="index.js"></script>
+</body>
+</html>
